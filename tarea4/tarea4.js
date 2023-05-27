@@ -11,7 +11,7 @@ document.querySelector(`#numero-frecuente`).textContent += retornarNumeroMasFrec
 function retornarArregloDeNumeros(arrayElementosLi){
     let arrayDeNumeros = [];
     for(let i = 0; i < arrayElementosLi.length; i++){
-        arrayDeNumeros[i] = arrayElementosLi[i]
+        arrayDeNumeros[i] = Number(arrayElementosLi[i].textContent);
     }
     return arrayDeNumeros;
 }
@@ -20,16 +20,16 @@ function retornarArregloDeNumeros(arrayElementosLi){
 function retornarPromedioNumeros(numeros) {
     let sumaTotal = 0;
     for(let i = 0; i < numeros.length; i++) {
-        sumaTotal += Number(numeros[i].textContent);
+        sumaTotal += numeros[i];
     }
     return sumaTotal / numeros.length;
 }
 
 function retornarMenorNumero(numeros) {
-    let numeroMenor = Number(numeros[0].textContent);
+    let numeroMenor = numeros[0];
     for(let i = 1; i < numeros.length; i++) {
-        if(Number(numeros[i].textContent) < numeroMenor){
-            numeroMenor = Number(numeros[i].textContent);
+        if(numeros[i] < numeroMenor){
+            numeroMenor = numeros[i];
         }
     }
     return numeroMenor;
@@ -38,8 +38,8 @@ function retornarMenorNumero(numeros) {
 function retornarMayorNumero(numeros) {
     let numeroMayor = 0;
     for(let i = 0; i < numeros.length; i++) {
-        if(Number(numeros[i].textContent) > numeroMayor) {
-            numeroMayor = Number(numeros[i].textContent);
+        if(numeros[i] > numeroMayor) {
+            numeroMayor = numeros[i];
         }
     }
     return numeroMayor;
@@ -54,11 +54,11 @@ function retornarNumeroMasFrecuente(numeros) {
     for(let i = 0; i < numeros.length; i++){
         cont = 0;
         for(let j = 0; j < numeros.length; j++){
-            if(Number(numeros[i].textContent) == Number(numeros[j].textContent)){
+            if(numeros[i] == numeros[j]){
                 cont++;
                 if(cont > cantidadRepeticiones){
                     cantidadRepeticiones = cont;
-                    numeroMasFrecuente = Number(numeros[i].textContent);
+                    numeroMasFrecuente = numeros[i];
                 }
             }
         }
