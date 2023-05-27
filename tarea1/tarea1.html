@@ -1,0 +1,27 @@
+<!-- TAREA: completar tareas/clase-5/index.html para que incluya tarea-clase-5.js
+TAREA: crear un formulario donde un usuario pueda ingresar su salario anual.
+cuando el usuario haga click en el botón "calcular", mostrar el salario mensual
+en una caja de texto deshabilitada. <input type="text" disabled id="salario-mensual"/> -->
+
+
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 5</title>
+    <link rel="stylesheet" href="tarea1.css">
+</head>
+<body>
+    <form class="formulario">
+        <label>Salario anual</label>
+        <input id="salario-anual" type="number" placeholder="Ingrese su salario anual">
+        <input id="boton-calcular" type="submit" value="Calcular"></input>
+        <label>Salario mensual</label>
+        <input id="salario-mensual" disabled>
+    </form>
+
+    <script src="tarea1.js"></script>
+</body>
+</html>

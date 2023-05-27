@@ -1,0 +1,62 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #555;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    height: 35vh;
+    width: 500px;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    border-radius: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.formulario h2 {
+    font-size: 26px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.formulario input {
+    font-size: 16px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    width: 60%;
+    color: #000;
+}
+
+.formulario input#salario-mensual {
+    width: 80%;
+    text-align: center;
+    background: #fff;
+}
+
+.formulario input#boton-calcular {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #5af;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
